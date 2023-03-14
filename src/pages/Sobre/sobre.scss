@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;0,700;1,200&display=swap');
 
-.sobre-section{
+.sobre-section {
     background-image: url('https://images.pexels.com/photos/19670/pexels-photo.jpg');
     background-size: 120vw auto;
     background-repeat: no-repeat;
@@ -17,18 +17,18 @@
 
     flex-direction: column;
 
-    img{
+    img {
         aspect-ratio: 1/1;
         width: 18vw;
         height: 18vw;
         border-radius: 50%;
-        
+
         object-fit: cover;
 
-        
+
     }
 
-    h1{
+    h1 {
         color: #272727;
         height: fit-content;
         font-family: 'Nunito Sans', sans-serif;
@@ -39,7 +39,7 @@
         gap: 20px;
     }
 
-    p{
+    p {
         width: 50%;
         margin-top: 20px;
         font-family: 'Nunito Sans', sans-serif;
@@ -47,7 +47,7 @@
         text-align: center;
     }
 
-    span{
+    span {
         font-family: 'Nunito Sans', sans-serif;
         font-weight: 200;
         font-style: italic;
@@ -55,7 +55,7 @@
     }
 }
 
-.socialDiv{
+.socialDiv {
     height: 30vh;
     background-color: rgb(210, 225, 240, 0.4);
 
@@ -65,7 +65,7 @@
     gap: 20px;
     flex-direction: column;
 
-    h1{
+    h1 {
         height: fit-content;
         font-family: 'Nunito Sans', sans-serif;
         font-weight: 700;
@@ -75,7 +75,7 @@
         gap: 20px;
     }
 
-    a{
+    a {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -83,51 +83,56 @@
         width: 30%;
         height: 80px;
 
-        
+
     }
 }
 
 @media screen and (max-width: 1080px) {
-    .mainDivSobre{
+    .mainDivSobre {
         padding-top: 20vh;
 
-        img{
+        img {
             width: 50vw;
             height: 50vw;
         }
 
-        h1{
+        h1 {
             font-size: 25px;
             margin-top: 10px;
             flex-direction: column;
             gap: 3px;
         }
-        
-        span{
+
+        span {
             display: none;
         }
     }
 
-    .iconSobre{
+    .iconSobre {
         width: 30px;
         height: 30px;
     }
 
-    .socialDiv{
+    .socialDiv {
         padding-top: 15vh;
-        h1{
+
+        h1 {
             margin-top: 20px;
             font-size: 30px;
             flex-direction: column;
             gap: 0;
         }
 
-        a{
+        a {
             width: 80%;
         }
     }
 
-    .sobre-section{
+
+}
+
+@media screen and (max-width: 1585px) {
+    .sobre-section {
         background-image: url('https://images.pexels.com/photos/19670/pexels-photo.jpg');
         background-size: auto;
         background-repeat: no-repeat;

@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Nunito+Sans&family=Oswald&display=swap');
+
+
+.bannerDiv {
+    background-image: url("https://cdn.discordapp.com/attachments/810357545436315671/1079946725403402240/interior-design-g5b5bd6c2c_1920.jpg");
+
+
+    min-height: 93vh;
+
+    background-attachment: fixed;
+    background-position: center top 94%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recentProjects {
+    height: 500px;
+    background-color: transparent;
+}
+
+.bannerLabelDiv {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.name {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80px;
+}
+
+.title {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.recentProjects {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+
+    gap: 30px;
+
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+.display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    margin-top: 10px;
+}
+
+.btoAllProjects {
+    padding: 10px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    background-color: #6291BC;
+    border: none;
+    cursor: pointer;
+    transition-duration: .5s;
+
+    &:hover {
+        background-color: #397dbd;
+    }
+}
+
+
+
+.project {
+    height: 250px;
+
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+
+    &:hover {
+        span {
+            visibility: visible;
+        }
+    }
+
+
+}
+
+
+.project img {
+    width: 550px;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    filter: brightness(100%) saturate(100%);
+    -webkit-filter: brightness(100%);
+}
+
+.project img:hover {
+    filter: brightness(50%) saturate(100%);
+    -webkit-filter: brightness(50%) saturate(100%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.project:hover img {
+    filter: brightness(50%) saturate(100%);
+    -webkit-filter: brightness(50%) saturate(100%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.project:hover span {
+    z-index: 1;
+}
+
+
+.project span {
+    height: 250px;
+    font-family: 'Nunito Sans', sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    visibility: hidden;
+
+    height: fit-content;
+    width: fit-content;
+
+    &:hover {
+        span {
+            visibility: visible;
+        }
+
+        .projectImg {
+            filter: brightness(50%) saturate(100%);
+            -webkit-filter: brightness(50%) saturate(100%);
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+
+    }
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.box-shadow {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2),
+        0px 0px 1px rgba(0, 0, 0, 0.14),
+        0px 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (max-width: 1600px) {
+    .display {
+        grid-template-columns: 1fr;
+        grid-template-rows: fit-content(100px) auto;
+        height: fit-content;
+    }
+
+    .recentProjects {
+        height: fit-content;
+        padding-bottom: 20px;
+    }
+
+    .project {
+        width: 90vw;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1080px) {
+
+
+    .bannerLabelDiv {
+        transform: translate(0, 50%);
+
+        h1 {
+            font-size: 25px;
+        }
+    }
+
+    .bannerDiv {
+        min-height: 50vh;
+        background-position: center bottom 45vh;
+    }
+
+    .loading-div {
+        width: 80vw;
+
+        h1 {
+            font-size: 20px;
+        }
+
+        div {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+}

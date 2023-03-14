@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;0,700;1,200&display=swap');
+
+.sobre-section{
+    background-image: url('https://images.pexels.com/photos/19670/pexels-photo.jpg');
+    background-size: 120vw auto;
+    background-repeat: no-repeat;
+}
+
+.mainDivSobre {
+    background-color: rgba(210, 225, 240, 0.4);
+    width: 100%;
+    height: 85vh;
+    padding-top: 20vh;
+
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+
+    img{
+        aspect-ratio: 1/1;
+        width: 18vw;
+        height: 18vw;
+        border-radius: 50%;
+        
+        object-fit: cover;
+
+        
+    }
+
+    h1{
+        color: #272727;
+        height: fit-content;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 700;
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    p{
+        width: 50%;
+        margin-top: 20px;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    span{
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 200;
+        font-style: italic;
+        margin-top: 65px;
+    }
+}
+
+.socialDiv{
+    height: 30vh;
+    background-color: rgb(210, 225, 240, 0.4);
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+    flex-direction: column;
+
+    h1{
+        height: fit-content;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 700;
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 30%;
+        height: 80px;
+
+        
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .mainDivSobre{
+        padding-top: 20vh;
+
+        img{
+            width: 50vw;
+            height: 50vw;
+        }
+
+        h1{
+            font-size: 25px;
+            margin-top: 10px;
+            flex-direction: column;
+            gap: 3px;
+        }
+        
+        span{
+            display: none;
+        }
+    }
+
+    .iconSobre{
+        width: 30px;
+        height: 30px;
+    }
+
+    .socialDiv{
+        padding-top: 15vh;
+        h1{
+            margin-top: 20px;
+            font-size: 30px;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        a{
+            width: 80%;
+        }
+    }
+
+    .sobre-section{
+        background-image: url('https://images.pexels.com/photos/19670/pexels-photo.jpg');
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+}

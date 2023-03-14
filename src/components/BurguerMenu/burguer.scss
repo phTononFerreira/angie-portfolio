@@ -1,0 +1,41 @@
+.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: fixed;
+    top: -5px;
+    left: -5px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    z-index: 10;
+    
+    
+}
+
+.burguerButton {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 9000;
+    transition-duration: .3s;
+
+    &:hover{
+        color: #6da3d6;
+    }
+}
+
+.burguerDiv{
+    width: fit-content;
+    
+}
+
+.navBur{
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+}

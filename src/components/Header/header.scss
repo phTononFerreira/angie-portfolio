@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Nunito+Sans&family=Oswald&display=swap');
+
+header {
+    height: 10%;
+
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 60px;
+
+    display: flex;
+    
+    justify-content: center;
+    z-index: 7;
+}
+
+.mainDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.541);
+    backdrop-filter: blur(8px);
+    padding: 30px;
+    border-radius: 15px;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+a {
+    color: #505050;
+    text-decoration: none;
+
+    font-family: 'Nunito Sans', sans-serif;
+    transition-duration: .5s;
+}
+
+.nav{
+    font-size: 27px;
+}
+
+a:hover{
+    color: #518ac0;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translate(0, 12%);
+    cursor: pointer;
+
+    h1 {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 200;
+    }
+
+    h2 {
+        font-family: 'Allura', cursive;
+        font-size: 50px;
+        transform: translate(0, -26%);
+        font-weight: 200;
+        color: #6da3d6;
+    }
+}
+
+.menu{
+    width: fit-content;
+    display: none;
+}
+
+@media screen and (max-width: 1080px) {
+    header{
+        padding: 5px;
+    }
+    .options{
+        display: none;
+    }
+
+    .logo{
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 200;
+            font-size: 25px;
+        }
+    
+        h2 {
+            font-family: 'Allura', cursive;
+            font-size: 25px;
+            transform: translate(0, -26%);
+            font-weight: 200;
+            color: #6da3d6;
+        }
+    }
+
+    .menu{
+        display: flex;
+    }
+}

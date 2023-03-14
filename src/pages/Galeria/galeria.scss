@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Nunito+Sans&family=Oswald&display=swap');
+
+
+
+.banner {
+    height: 50vh;
+
+    background-position: center top 100%;
+
+
+
+    img {
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    h1 {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 60px;
+
+        background-color: rgba(0, 0, 0, 0.452);
+        backdrop-filter: blur(5px);
+        padding: 10px;
+        border-radius: 15px;
+
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 60px;
+    text-align: center;
+    row-gap: 40px;
+
+}
+
+.photo {
+    height: 25vw;
+
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+
+    &:hover {
+        span {
+            visibility: visible;
+        }
+    }
+
+
+}
+
+.photo-item {
+    display: flex;
+    justify-content: center;
+}
+
+
+.photo img {
+    width: 25vw;
+    height: 25vw;
+    object-fit: cover;
+    cursor: pointer;
+    filter: brightness(100%) saturate(100%);
+    -webkit-filter: brightness(100%);
+}
+
+.photo img:hover {
+    filter: brightness(50%) saturate(100%);
+    -webkit-filter: brightness(50%) saturate(100%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.photo:hover img {
+    filter: brightness(50%) saturate(100%);
+    -webkit-filter: brightness(50%) saturate(100%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.photo:hover span {
+    z-index: 1;
+}
+
+
+.photo span {
+    height: 250px;
+    font-family: 'Nunito Sans', sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    visibility: hidden;
+
+    height: fit-content;
+    width: fit-content;
+
+    &:hover {
+        span {
+            visibility: visible;
+        }
+
+        .photoImg {
+            filter: brightness(50%) saturate(100%);
+            -webkit-filter: brightness(50%) saturate(100%);
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+
+    }
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.box-shadow {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2),
+        0px 0px 1px rgba(0, 0, 0, 0.14),
+        0px 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (max-width: 1080px) {
+    .photo-item {
+        width: 100%;
+        height: 60vw;
+    }
+
+    .photo {
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .photo img {
+        width: 60vw;
+        height: 60vw;
+    }
+}

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;0,700;1,200&display=swap');
+
+.contato-section{
+    background-image: url('https://images.pexels.com/photos/695657/pexels-photo-695657.jpeg');
+    background-size: 100vw auto;
+    background-repeat: no-repeat;
+}
+
+.gridContato {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    height: 20vh;
+    width: 70%;
+    row-gap: 20px;
+}
+
+
+.mainDivContato {
+    background-color: #c6edff7d; 
+
+
+    width: 100%;
+    height: 85vh;
+    padding-top: 23vh;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.contatoDiv {
+    cursor: pointer;
+    color: #303030;
+    font-family: 'Nunito Sans', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    background-color: rgba(255, 255, 255, 0.151);
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    width: 30vw;
+    height: 10vh;
+
+    &:hover{
+        background: rgba(255, 255, 255, 0.4);
+    }
+}
+
+.contatoDivP {
+    display: flex;
+    justify-content: center;
+}
+
+.whatsapp{
+    &:hover{
+        color: rgb(0, 180, 0);
+    }
+}
+
+.instagram{
+    &:hover{
+        color: rgb(180, 0, 150);
+    }
+}
+
+.email{
+    &:hover{
+        color: rgb(180, 0, 0);
+    }
+}
+
+.linkedin{
+    &:hover{
+        color: rgb(0, 93, 180);
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .gridContato{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contatoDiv{
+        width: 100%;
+    }
+
+    .contato-section{
+        background-image: url('https://images.pexels.com/photos/695657/pexels-photo-695657.jpeg');
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+}

@@ -112,3 +112,21 @@ a:hover{
         display: flex;
     }
 }
+
+@media screen and (max-width: 315px) {
+    .logo{
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 200;
+            font-size: 6vw;
+        }
+    
+        h2 {
+            font-family: 'Allura', cursive;
+            font-size: 6vw;
+            transform: translate(0, -26%);
+            font-weight: 200;
+            color: #6da3d6;
+        }
+    }
+}

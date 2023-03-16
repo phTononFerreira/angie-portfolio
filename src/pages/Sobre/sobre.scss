@@ -97,7 +97,7 @@
         }
 
         h1 {
-            font-size: 25px;
+            font-size: 7.2vw;
             margin-top: 10px;
             flex-direction: column;
             gap: 3px;
@@ -136,5 +136,24 @@
         background-image: url('https://images.pexels.com/photos/19670/pexels-photo.jpg');
         background-size: auto;
         background-repeat: no-repeat;
+    }
+
+    .mainDivSobre {
+        height: fit-content;
+        padding-bottom: 7rem;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 350px) {
+
+    .socialDiv {
+        padding-bottom: 20px;
+
+        h1 {
+            font-size: 8vw;
+        }
     }
 }

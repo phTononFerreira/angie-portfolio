@@ -15,7 +15,9 @@ export default function Sobre() {
             <div className="mainDivSobre">
                 <img className='profilepic' src='https://cdn.discordapp.com/attachments/810357545436315671/1084590856180342835/328154226_157199103438439_4804731725574381367_n.jpg' />
                 <h1 className='titleSobre'>Olá, sou Angela Sanchez.<FaHeart className='iconSobre' size={40} color="white" /></h1>
-                <p className='paragraph'>Duis eget nisl ex. Donec et scelerisque enim. Nunc egestas odio a est consectetur, suscipit ultricies sem venenatis. Vestibulum mollis justo sed tortor condimentum posuere. Fusce nulla purus, condimentum sed velit in, feugiat elementum ligula. Fusce id libero a libero interdum cursus ut eget odio. Donec convallis, justo nec hendrerit malesuada, metus eros volutpat lorem, quis volutpat velit massa ut magna. Integer hendrerit ac sapien in tincidunt.</p>
+                <p className='paragraph'>Desde a infância, o desenho foi uma paixão e habilidade que sempre me acompanhou. Ao longo do tempo, descobri que a Arquitetura e Urbanismo eram as áreas perfeitas para unir minha paixão pelo desenho com minha vontade de criar e transformar espaços.
+                    Tenho uma grande vontade de aprender e estou sempre em busca de novas ferramentas e conhecimentos que me ajudem a evoluir na minha carreira. Além disso, sou comunicativa e acredito que a troca de ideias e experiências é fundamental para o desenvolvimento de projetos incríveis.
+                    Como profissional, estou sempre aberta a novas oportunidades e desafios que possam expandir minha visão e me permitir crescer ainda mais. Estou animada para continuar a explorar a Arquitetura e Urbanismo, criando espaços que inspirem e transformem a vida das pessoas.</p>
                 <span>arquitetura / urbanismo / edificação / planejamento / habitação / paisagem / patrimônio / história / sustentabilidade / eficiência / desenho / maquete / estética / funcionalidade</span>
             </div>
             <div className='socialDiv'>

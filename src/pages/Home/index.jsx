@@ -14,7 +14,6 @@ export default function Home() {
         const api = setupApiClient()
 
         if (projects.length === 0) {
-            console.log("Projects está vazio!")
             return
         }
         const projectsInjected = await Promise.all(

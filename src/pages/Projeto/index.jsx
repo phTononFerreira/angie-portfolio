@@ -36,7 +36,6 @@ export default function Projeto() {
         const api = setupApiClient()
         const response = await api.get('/project')
         const project = response.data.filter((p) => String(p.id) === id)[0]
-        console.log(project)
         if (project !== undefined) {
             setProjeto(project)
         }
@@ -45,7 +44,6 @@ export default function Projeto() {
     //<span className='detail'>{projeto ? projeto.description  : ""}</span>
     useEffect(() => {
         if (projeto == undefined) {
-            console.log("ENTROU")
             navigate('/')
         }
     }, [projeto])

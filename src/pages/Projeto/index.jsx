@@ -41,7 +41,7 @@ export default function Projeto() {
         }
         document.title = `${project.name} / Angela Sanchez`;
     }
-    //<span className='detail'>{projeto ? projeto.description  : ""}</span>
+    
     useEffect(() => {
         if (projeto == undefined) {
             navigate('/')

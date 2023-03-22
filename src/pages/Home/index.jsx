@@ -50,7 +50,6 @@ export default function Home() {
 
     useEffect(() => {
         loadProjects()
-        injectURL()
         document.title = 'Portfólio / Angela Sanchez';
     }, [])
 
@@ -67,7 +66,7 @@ export default function Home() {
                 <div className='display' >
                     {projectsURL.length != 0 ? projectsURL.map((project) => {
                         return (
-                            <Link to={`/projeto/${project.id}`}>
+                            <Link key={project.name} to={`/projeto/${project.id}`}>
                                 <div className='project box-shadow'>
                                     <img className='projectImg' alt='Foto projeto 1' src={project.url} />
                                     <span className='unselectable'>{project.name}</span>

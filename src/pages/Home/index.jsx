@@ -16,6 +16,7 @@ export default function Home() {
         if (projects.length === 0) {
             return
         }
+        console.log(projects)
         const projectsInjected = await Promise.all(
             projects.map(async (project) => {
                 const responseImage = await api.get(`/project/images?project_id=${project.id}`);

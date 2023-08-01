@@ -39,9 +39,12 @@ export default function Projetos() {
         const api = setupApiClient()
         const responseProject = await api.get('/project')
 
-        setProjects(responseProject.data)
-        await injectURL()
+        if (Array.isArray(responseProject.data)) {
+            setProjects(responseProject.data)
+            await injectURL()
+        }
     }
+
     useEffect(() => {
         injectURL()
     }, [projects])

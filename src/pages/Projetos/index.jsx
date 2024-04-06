@@ -1,59 +1,45 @@
 import { useEffect, useState } from 'react'
+import { useQuery } from 'react-query'; // Importando useQuery do react-query
 import { Link } from 'react-router-dom'
 import { setupApiClient } from '../../services/api'
 
 import './projetos.scss'
 
 export default function Projetos() {
-    const [projects, setProjects] = useState([])
     const [projectsURL, setProjectsURL] = useState([])
 
-    async function injectURL() {
-
+    // Definindo a função para buscar os projetos
+    const { data: projects, isLoading } = useQuery('projects', async () => {
         const api = setupApiClient()
+        const response = await api.get('/project')
+        return response.data
+    })
 
-        if (projects.length === 0) {
-            return
-        }
-        console.log(projects)
-        const projectsInjected = await Promise.all(
-            
+    // Definindo a função para buscar as URLs das imagens
+    const { data: projectsImageUrls } = useQuery(['projectImages', projects], async () => {
+        if (!projects || projects.length === 0) return []
+        const api = setupApiClient()
+        const imageUrls = await Promise.all(
             projects.map(async (project) => {
                 const responseImage = await api.get(`/project/images?project_id=${project.id}`);
-                const response = responseImage.data;
-
-                if (response.length === 0) {
-                    project.url = "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png";
+                if (responseImage.data.length === 0) {
+                    return "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png";
                 } else {
-                    project.url = response[0].url
+                    return responseImage.data[0].url
                 }
-
-                return project;
             })
         );
-        
-        setProjectsURL(projectsInjected)
+        return imageUrls
+    })
 
-    }
-
-    async function loadProjects() {
-        const api = setupApiClient()
-        const responseProject = await api.get('/project')
-
-        if (Array.isArray(responseProject.data)) {
-            setProjects(responseProject.data)
-            await injectURL()
+    // Atualizando o estado das URLs das imagens quando houver mudanças
+    useEffect(() => {
+        if (projectsImageUrls) {
+            setProjectsURL(projectsImageUrls)
         }
-    }
+    }, [projectsImageUrls])
 
     useEffect(() => {
-        injectURL()
-    }, [projects])
-
-
-    useEffect(() => {
-        loadProjects()
-        injectURL()
         document.title = `Projetos / Angela Sanchez`;
     }, [])
 
@@ -64,27 +50,25 @@ export default function Projetos() {
                 <h1>Projetos</h1>
             </div>
             <div className='grid'>
-                {projectsURL.length !== 0 ? projectsURL.map((project) => {
-                    return (
-                        <Link to={`/projeto/${project.id}`}>
-                            <div key={project.id} className='project-item'>
-                                <img alt='Project' src={project.url} />
+                {isLoading ? (
+                    <div className='loading-div'>
+                        <h1>CARREGANDO...</h1>
+                        <div className='spinner'></div>
+                    </div>
+                ) : (
+                    projectsURL.map((url, index) => (
+                        <Link to={`/projeto/${projects[index].id}`} key={projects[index].id}>
+                            <div className='project-item'>
+                                <img alt='Project' src={url} />
                                 <div className='project-item-label'>
-                                    <span className='project-name'>{project.name}</span>
-                                    <span className='project-year'>{project.date}</span>
+                                    <span className='project-name'>{projects[index].name}</span>
+                                    <span className='project-year'>{projects[index].date}</span>
                                 </div>
                             </div>
                         </Link>
-                    )
-                }) : (
-                
-                <div className='loading-div'>
-                    <h1>CARREGANDO...</h1>
-                    <div className='spinner'></div>
-                </div>
+                    ))
                 )}
             </div>
         </section>
-
     )
 }

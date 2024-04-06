@@ -15,13 +15,10 @@ Um [portfólio](https://angelasanchez.vercel.app/) de arquitetura para a Angela 
 - 🚄 Railway  
 
 # 🎨 Design
-![Home Page](https://cdn.discordapp.com/attachments/810357545436315671/1085791523293106176/image.png "Home Page")
+![Home Page](https://res.cloudinary.com/dzkrz6yzs/image/upload/v1712430155/dhxnvyduzkrib2wgoqto.png "Home Page")
 <br/>
 <br/>
-![Projects](https://cdn.discordapp.com/attachments/810357545436315671/1085791646173646919/image.png "Projects")
+![Projects](https://res.cloudinary.com/dzkrz6yzs/image/upload/v1712430155/agq8mprao1tzubhg3f46.png "Projects")
 <br/>
 <br/>
-![Sobre](https://cdn.discordapp.com/attachments/810357545436315671/1085791698505965578/image.png "Sobre")
-<br/>
-<br/>
-![Galeria](https://cdn.discordapp.com/attachments/810357545436315671/1085791746853699584/image.png "Galeria")
+![Galeria](https://res.cloudinary.com/dzkrz6yzs/image/upload/v1712430155/kywszdtne9hj9hs65rgr.png "Galeria")

@@ -76,7 +76,6 @@ export default function Home() {
                         )
                     }) : (
                         <div className='loading-div'>
-                            <h1>CARREGANDO...</h1>
                             <div className='spinner'></div>
                         </div>)
                     }

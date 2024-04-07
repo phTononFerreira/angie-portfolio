@@ -14,7 +14,7 @@ export default function Contato() {
             <div className="mainDivContato">
                 <div className='gridContato'>
                     <div className='contatoDivP'>
-                        <a target="_blank" href='https://www.instagram.com/_sanchez.angela_/' className='contatoDiv instagram'>
+                        <a target="_blank" href='https://www.instagram.com/arq_angelasanchez/' className='contatoDiv instagram'>
                             <h2>Instagram</h2>
                             <BsInstagram size={40} />
                         </a>

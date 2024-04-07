@@ -1,21 +1,19 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import { useQuery } from 'react-query'; // Importando useQuery do react-query
-import { Link } from 'react-router-dom'
-import { setupApiClient } from '../../services/api'
+import { Link } from 'react-router-dom';
+import { setupApiClient } from '../../services/api';
 
-import './projetos.scss'
+import './projetos.scss';
 
 export default function Projetos() {
     const [projectsURL, setProjectsURL] = useState([])
 
-    // Definindo a função para buscar os projetos
     const { data: projects, isLoading } = useQuery('projects', async () => {
         const api = setupApiClient()
         const response = await api.get('/project')
         return response.data
     })
 
-    // Definindo a função para buscar as URLs das imagens
     const { data: projectsImageUrls } = useQuery(['projectImages', projects], async () => {
         if (!projects || projects.length === 0) return []
         const api = setupApiClient()
@@ -32,7 +30,6 @@ export default function Projetos() {
         return imageUrls
     })
 
-    // Atualizando o estado das URLs das imagens quando houver mudanças
     useEffect(() => {
         if (projectsImageUrls) {
             setProjectsURL(projectsImageUrls)

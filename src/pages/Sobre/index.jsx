@@ -13,7 +13,7 @@ export default function Sobre() {
 
         <section className='sobre-section'>
             <div className="mainDivSobre">
-                <img className='profilepic' src='https://cdn.discordapp.com/attachments/810357545436315671/1084590856180342835/328154226_157199103438439_4804731725574381367_n.jpg' />
+                <img className='profilepic' src='https://res.cloudinary.com/dgejoa3jk/image/upload/v1712504500/xkoptef5fua9rpxgl5aa.jpg' />
                 <h1 className='titleSobre'>Olá, sou Angela Sanchez.<FaHeart className='iconSobre' size={40} color="white" /></h1>
                 <p className='paragraph'>Desde a infância, o desenho foi uma paixão e habilidade que sempre me acompanhou. Ao longo do tempo, descobri que a Arquitetura e Urbanismo eram as áreas perfeitas para unir minha paixão pelo desenho com minha vontade de criar e transformar espaços.
                     Tenho uma grande vontade de aprender e estou sempre em busca de novas ferramentas e conhecimentos que me ajudem a evoluir na minha carreira. Além disso, sou comunicativa e acredito que a troca de ideias e experiências é fundamental para o desenvolvimento de projetos incríveis.
